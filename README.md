@@ -1,5 +1,6 @@
 # web_server
-#Introduction:
+
+##Introduction:
 
 This project is a complete web server developed in C++ as part of the Ecole 42 training program.
 
