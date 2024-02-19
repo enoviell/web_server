@@ -3,13 +3,14 @@
 
 This project is a complete web server developed in C++ as part of the Ecole 42 training program.
 
-#Objectives:
+##Objectives:
 
 Learn the basics of web server development.
 Gain familiarity with C++ programming.
 Understand the workings of a network system.
 Develop problem-solving and debugging skills.
-#Features:
+
+##Features:
 
 The web server handles GET , DELETE and POST requests.
 It supports URL encoding and static file management.
