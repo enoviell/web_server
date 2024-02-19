@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBSERVER</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b8e994; /* #d9ead3 verde chiaro */
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff; /* bianco */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #3b5323; /* verde scuro */
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #3b5323; /* verde scuro */
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3b5323; /* verde scuro */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e3d15; /* verde più scuro al passaggio del mouse */
+    }
+
+    .resize_div {
+      ;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>BENVENUTO SU WEBSERVER </h1>
+
+  <!-- Form to gather input from the user -->
+  <form id="requestForm" method="get" enctype="multipart/form-data">
+    <label for="requestData">Enter Data:</label>
+    <input type="text" id="requestData" name="requestData">
+    <button type="button" onclick="makeRequest()">Submit Request</button>
+  </form>
+</div>
+
+<div class="container" style="text-align: center">
+    <form id="goToUp" method="get" enctype="multipart/form-data">
+      <p style="align-content: center">Vai alla pagina di upload</p>
+      <button type="button" onclick="window.location.href = 'upload.html'">Go to Upload Page</button>
+    </form>
+</div>
+
+<div class="container">
+  <center> <button type="button" onclick="redirectUrl()">Test redirect URL(pay attention to the port)</button> </center>
+</div>
+
+<script>
+  function makeRequest() {
+    var requestData = document.getElementById("requestData").value;
+
+    // Construct the URL with the data as a query parameter
+    var url = "http://127.0.0.1:6969/" + encodeURIComponent(requestData);
+
+    // Redirect to the constructed URL
+    window.location.href = url;
+  }
+
+  function redirectUrl() {
+    // Construct the URL with the data as a query parameter
+    var url = "http://127.0.0.1:6968/";
+
+    // Redirect to the constructed URL
+    window.location.href = url;
+  }
+</script>
+
+</body>
+</html>
